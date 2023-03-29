@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/extensions.dart';
-import '../../constants/colors.dart';
 
 class FormField extends StatelessWidget {
   const FormField(
@@ -20,9 +19,8 @@ class FormField extends StatelessWidget {
           prefixIcon: prefixIcon,
           hintText: hintText,
           filled: true,
-          fillColor: surface,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide.none,
           )),
       keyboardType: keyboardType,
@@ -62,8 +60,9 @@ class PasswordFormField extends StatelessWidget {
             prefixIcon: const Icon(Icons.lock)),
         TextButton(
             onPressed: () {},
-            child: Text(context.l10n.authForgotPassword,
-                style: const TextStyle(color: secondary)))
+            child: Text(
+              context.l10n.authForgotPassword,
+            ))
       ],
     );
   }

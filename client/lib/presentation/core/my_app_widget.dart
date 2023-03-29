@@ -22,7 +22,9 @@ class _MyAppRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Road Runner',
       routerDelegate: _appRouter.delegate(),
