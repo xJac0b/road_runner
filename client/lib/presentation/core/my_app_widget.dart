@@ -23,8 +23,8 @@ class _MyAppRouter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
-        useMaterial3: true,
-      ),
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent)),
       debugShowCheckedModeBanner: false,
       title: 'Road Runner',
       routerDelegate: _appRouter.delegate(),

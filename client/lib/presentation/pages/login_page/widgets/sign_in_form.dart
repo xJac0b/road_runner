@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:road_runner/presentation/core/widgets/authentication/form_submit_buton.dart';
 import 'package:road_runner/presentation/router/router.dart';
 import '../../../../utils/extensions.dart';
 import '../../../core/constants/dimensions.dart';
@@ -32,18 +33,7 @@ class SignInForm extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: horizontalPadding, vertical: verticalPadding),
-          child: Container(
-            width: double.infinity,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-              onPressed: () {},
-              child: Text(context.l10n.authSignIn),
-            ),
-          ),
+          child: FormSubmitButton(buttonText: context.l10n.authSignUp),
         ),
         SwitchFormButton(
             leadingText: context.l10n.authNoAccount,

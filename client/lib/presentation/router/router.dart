@@ -12,8 +12,8 @@ part 'router.gr.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute<SplashPage>(page: SplashPage), //!set initial:true
-    AutoRoute<LoginPage>(page: LoginPage, initial: true),
+    AutoRoute<SplashPage>(page: SplashPage, initial: true),
+    AutoRoute<LoginPage>(page: LoginPage, initial: false),
     AutoRoute<RegisterPage>(page: RegisterPage, initial: true),
     AutoRoute<HomePage>(page: HomePage),
     AutoRoute<SearchPage>(page: SearchPage),

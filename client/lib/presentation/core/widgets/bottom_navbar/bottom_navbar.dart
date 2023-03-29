@@ -23,9 +23,9 @@ class BottomNavBar extends StatelessWidget {
       child: Container(
         width: context.screenSize.width * 1,
         height: context.screenSize.height * 0.125,
-        decoration: const BoxDecoration(
-          color: primary,
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          color: context.colors.primary,
+          borderRadius: const BorderRadius.only(
             topLeft: radius,
             topRight: radius,
           ),

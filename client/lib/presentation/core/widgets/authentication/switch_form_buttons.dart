@@ -19,11 +19,11 @@ class SwitchFormButton extends StatelessWidget {
     return RichText(
         text: TextSpan(children: [
       TextSpan(
-        text: context.l10n.authNoAccount,
+        text: leadingText,
         style: TextStyle(color: context.colors.secondary),
       ),
       TextSpan(
-          text: ' ${context.l10n.authSignUp}',
+          text: ' $buttonText',
           style: TextStyle(color: context.colors.primary),
           recognizer: TapGestureRecognizer()
             ..onTap = () {
