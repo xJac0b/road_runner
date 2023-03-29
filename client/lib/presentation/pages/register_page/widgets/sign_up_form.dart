@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:road_runner/presentation/core/widgets/authentication/switch_form_buttons.dart';
 import 'package:road_runner/presentation/router/router.dart';
 import '../../../../utils/extensions.dart';
 import '../../../core/constants/dimensions.dart';
 import '../../../core/widgets/authentication/form_fields.dart';
-import '../../../core/widgets/authentication/switch_form_buttons.dart';
 
-class SignInForm extends StatelessWidget {
-  const SignInForm({
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
     super.key,
   });
 
@@ -22,9 +22,7 @@ class SignInForm extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.symmetric(
               horizontal: horizontalPadding, vertical: verticalPadding),
-          child: PasswordFormField(
-            forgotPassword: true,
-          ),
+          child: PasswordFormField(),
         ),
         const SizedBox(
           height: 12,
@@ -46,9 +44,10 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         SwitchFormButton(
-            leadingText: context.l10n.authNoAccount,
-            buttonText: context.l10n.authSignUp,
-            route: const RegisterRoute())
+          leadingText: context.l10n.authNoAccount,
+          buttonText: context.l10n.authSignUp,
+          route: const LoginRoute(),
+        )
       ]),
     );
   }

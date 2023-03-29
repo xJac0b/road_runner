@@ -42,14 +42,18 @@ class EmailFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FormField(
+        prefixIcon: const Icon(Icons.email),
         hintText: context.l10n.authEmail,
         keyboardType: TextInputType.emailAddress);
   }
 }
 
 class PasswordFormField extends StatelessWidget {
-  const PasswordFormField({super.key});
-
+  const PasswordFormField({
+    super.key,
+    this.forgotPassword = false,
+  });
+  final bool forgotPassword;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -58,13 +62,20 @@ class PasswordFormField extends StatelessWidget {
             hintText: context.l10n.authPassword,
             keyboardType: TextInputType.visiblePassword,
             prefixIcon: const Icon(Icons.lock)),
-        TextButton(
-            onPressed: () {},
-            child: Text(
-              context.l10n.authForgotPassword,
-            ))
+        if (forgotPassword)
+          TextButton(
+              onPressed: () {},
+              child: Text(
+                context.l10n.authForgotPassword,
+              ))
       ],
     );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty<bool>('forgotPassword', forgotPassword));
   }
 }
 
