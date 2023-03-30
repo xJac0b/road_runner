@@ -4,19 +4,23 @@ import 'package:flutter/material.dart';
 import '../../../../utils/extensions.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField(
-      {super.key,
-      required this.keyboardType,
-      required this.hintText,
-      this.prefixIcon,
-      this.suffixIcon});
+  const CustomTextFormField({
+    Key? key,
+    required this.keyboardType,
+    required this.hintText,
+    this.prefixIcon,
+    this.suffixIcon,
+    this.obscureText = false,
+  }) : super(key: key);
   final TextInputType keyboardType;
   final String hintText;
-  final Icon? prefixIcon;
-  final Icon? suffixIcon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       decoration: InputDecoration(
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,
@@ -35,7 +39,7 @@ class CustomTextFormField extends StatelessWidget {
     super.debugFillProperties(properties);
     properties
       ..add(StringProperty('hintText', hintText))
-      ..add(DiagnosticsProperty<TextInputType>('keyboardType', keyboardType));
+      ..add(DiagnosticsProperty<TextInputType>('keyboardType', keyboardType))
+      ..add(DiagnosticsProperty<bool>('obscureText', obscureText));
   }
 }
-
