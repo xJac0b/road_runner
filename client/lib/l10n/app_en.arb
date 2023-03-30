@@ -12,6 +12,8 @@
   "settingsCommunityGuidelines": "Community Guidelines",
   "settingsPrivacyPolicy": "Privacy Policy",
   "searchInputHolder": "Where do you want to go?",
+  "authLoginHeading": "Welcome back",
+  "authRegisterHeading": "Create an account",
   "authEmail": "Email",
   "authUsername": "Username",
   "authPassword": "Password",
