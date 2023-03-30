@@ -24,7 +24,8 @@ class SwitchFormButton extends StatelessWidget {
       ),
       TextSpan(
           text: ' $buttonText',
-          style: TextStyle(color: context.colors.primary),
+          style: TextStyle(
+              color: context.colors.primary, fontWeight: FontWeight.bold),
           recognizer: TapGestureRecognizer()
             ..onTap = () {
               context.router.replace(route);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:road_runner/presentation/core/widgets/authentication/email_form_field.dart';
 import 'package:road_runner/presentation/core/widgets/authentication/form_submit_buton.dart';
 import 'package:road_runner/presentation/core/widgets/authentication/password_form_field.dart';
-import 'package:road_runner/presentation/core/widgets/authentication/switch_form_buttons.dart';
+import 'package:road_runner/presentation/core/widgets/authentication/switch_form_button.dart';
 import 'package:road_runner/presentation/router/router.dart';
 import '../../../../utils/extensions.dart';
 import '../../../core/constants/dimensions.dart';
@@ -34,6 +34,9 @@ class SignUpForm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
               horizontal: horizontalPadding, vertical: verticalPadding),
           child: FormSubmitButton(buttonText: context.l10n.authSignUp),
+        ),
+        const SizedBox(
+          height: 36,
         ),
         SwitchFormButton(
           leadingText: context.l10n.authHaveAccount,

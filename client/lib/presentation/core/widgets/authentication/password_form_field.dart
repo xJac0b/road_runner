@@ -44,6 +44,7 @@ class _PasswordFormFieldState extends State<PasswordFormField> {
               onPressed: () {},
               child: Text(
                 context.l10n.authForgotPassword,
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ))
       ],
     );

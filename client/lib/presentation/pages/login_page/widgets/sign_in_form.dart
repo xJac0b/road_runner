@@ -5,7 +5,7 @@ import 'package:road_runner/presentation/router/router.dart';
 import '../../../../utils/extensions.dart';
 import '../../../core/constants/dimensions.dart';
 import '../../../core/widgets/authentication/email_form_field.dart';
-import '../../../core/widgets/authentication/switch_form_buttons.dart';
+import '../../../core/widgets/authentication/switch_form_button.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({
@@ -34,7 +34,10 @@ class SignInForm extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: horizontalPadding, vertical: verticalPadding),
-          child: FormSubmitButton(buttonText: context.l10n.authSignUp),
+          child: FormSubmitButton(buttonText: context.l10n.authSignIn),
+        ),
+        const SizedBox(
+          height: 36,
         ),
         SwitchFormButton(
             leadingText: context.l10n.authNoAccount,

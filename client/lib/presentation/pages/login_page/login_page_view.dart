@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:road_runner/presentation/core/widgets/authentication/page_title.dart';
 
+import '../../../utils/extensions.dart';
 import 'widgets/sign_in_form.dart';
 
 class LoginPageView extends StatelessWidget {
@@ -7,13 +9,14 @@ class LoginPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Login Page'),
-          SignInForm(),
+          PageTitle(title: context.l10n.authLoginHeading),
+          const SizedBox(height: 20),
+          const SignInForm(),
         ],
       )),
     );
